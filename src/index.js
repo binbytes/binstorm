@@ -6,7 +6,7 @@ import { PATH_CONFIG, PATH_LOCAL_CONFIG } from './constants'
 import exec from './utils/cmd'
 
 const argv = process.argv.slice(2)
-let code, config
+let config
 switch (argv[0]) {
   case 'init':
     {
