@@ -1,0 +1,68 @@
+{
+  "name": "binstorm",
+  "version": "0.0.1",
+  "description": "BinStorm is a React Native styling utility for rapidly building custom user interfaces",
+  "main": "./build/index.js",
+  "scripts": {
+    "babel-node": "babel-node --",
+    "build": "./node_modules/.bin/babel src -d build && node dev_utils/copyDir.js build",
+    "dist": "./node_modules/.bin/babel src -d dist --presets=babili --ignore src/stub && node dev_utils/copyDir.js dist",
+    "init": "./node_modules/.bin/babel src -d build && node dev_utils/copyDir.js build && node build/index.js init",
+    "dev": "./node_modules/nodemon/bin/nodemon.js --exec npm run init",
+    "re-style": "node build/index.js re-style",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binbytes/binstorm.git"
+  },
+  "keywords": [
+    "binstorm",
+    "react-native",
+    "style",
+    "generator",
+    "nodejs",
+    "es6",
+    "es2015",
+    "babel",
+    "mocha",
+    "lint"
+  ],
+  "author": "Bhavik Charola <bhavikcharola@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binbytes/binstorm/issues"
+  },
+  "homepage": "https://github.com/binbytes/binstorm#readme",
+  "dependencies": {
+    "merge-deep": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-node": "^6.1.1",
+    "babili": "^0.1.3",
+    "copy-dir": "^0.4.0",
+    "eslint": "^5.11.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "power-assert": "^1.4.4",
+    "prettier": "1.15.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "theme/*",
+      "build/*",
+      "dist/*"
+    ],
+    "delay": "2500"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "binstorm": "./dist/index.js"
+  }
+}
