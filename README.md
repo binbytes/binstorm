@@ -18,6 +18,9 @@ For full documentation, visit [BinStorm](https://docs-binstorm.binbytes.com)
 
 - [Bhavik Charola](https://github.com/bhavik66)
 
+
+Inspire from [TailWindCSS](https://tailwindcss.com/)
+
 ## License
 
 MIT License. Please see the [license file](LICENSE.md) for more information.
