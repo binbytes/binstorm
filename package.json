@@ -1,6 +1,6 @@
 {
   "name": "binstorm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "BinStorm is a React Native styling utility for rapidly building custom user interfaces",
   "main": "./build/index.js",
   "scripts": {
@@ -9,7 +9,6 @@
     "dist": "./node_modules/.bin/babel src -d dist --presets=babili --ignore src/stub && node dev_utils/copyDir.js dist",
     "init": "./node_modules/.bin/babel src -d build && node dev_utils/copyDir.js build && node build/index.js init",
     "dev": "./node_modules/nodemon/bin/nodemon.js --exec npm run init",
-    "re-style": "node build/index.js re-style",
     "test": "./node_modules/.bin/mocha --compilers js:babel-core/register --reporter spec"
   },
   "repository": {
@@ -35,6 +34,7 @@
   },
   "homepage": "https://github.com/binbytes/binstorm#readme",
   "dependencies": {
+    "cli-table": "^0.3.1",
     "merge-deep": "^3.0.2"
   },
   "devDependencies": {
