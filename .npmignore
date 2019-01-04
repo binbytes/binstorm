@@ -1,5 +1,9 @@
+.idea/
+.vscode/
 src/
 build/
 dev_utils/
+test/
+theme/
 npm-debug.log
 .babelrc
