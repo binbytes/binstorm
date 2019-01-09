@@ -25,10 +25,13 @@ export function buildFile(content) {
   create(OUT_STYLE, finalStyle)
 }
 
-export function configurePackageJSON() {
+export function configurePackageJSON(path) {
   const packageJSON = JSON.parse(readPackageJSON())
-  packageJSON.scripts['dev-android'] =
-    'binstorm re-style && react-native run-android'
-  packageJSON.scripts['dev-ios'] = 'binstorm re-style && react-native run-ios'
+  packageJSON.scripts[
+    'dev-android'
+  ] = `node '${path}/index.js' re-style && react-native run-android`
+  packageJSON.scripts[
+    'dev-ios'
+  ] = `node '${path}/index.js' re-style && react-native run-ios`
   writePackageJSON(JSON.stringify(packageJSON, null, 2))
 }

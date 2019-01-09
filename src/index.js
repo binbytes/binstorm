@@ -16,7 +16,7 @@ switch (argv[0]) {
       config = require(PATH_CONFIG)
       const code2 = buildCode(config)
       buildFile(Object.assign(code1, code2))
-      configurePackageJSON()
+      configurePackageJSON(__dirname)
     }
     break
 
