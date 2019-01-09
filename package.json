@@ -1,6 +1,6 @@
 {
   "name": "binstorm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "BinStorm is a React Native styling utility for rapidly building custom user interfaces",
   "main": "./build/index.js",
   "scripts": {
