@@ -7,7 +7,9 @@
   </center>
 </p>
 
-
+![](https://img.shields.io/npm/dt/binstorm.svg)
+![](https://img.shields.io/npm/l/binstorm.svg)
+![](https://img.shields.io/npm/v/binstorm.svg)
 
 BinStorm is a React Native styling utility for rapidly building custom user interfaces
 
